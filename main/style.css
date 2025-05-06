@@ -9,15 +9,15 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-color: rgb(182, 103, 12);
+    background-color: #bd7e20;
 }
 
 #intro-screen {
-    background-image: url('graphics/background.png');
+    background-image: url('images/background.png');
     background-repeat: repeat-y;
     background-size: 900px auto;
     background-position: center;
-    color: rgb(0, 0, 0);
+    color: white;
     padding: 20px;
     text-align: center;
     max-width: 900px;
@@ -33,10 +33,10 @@ body {
 
 h2, h1, p {
     text-align: center; 
-    width: 100%;   
+    width: 100%;  
     position: relative;
     margin: 20px 0; 
-}
+    }
 
 h3 {
     margin: 10px 10px;
@@ -44,12 +44,79 @@ h3 {
 
 button {
     background-color: black;
-    color: rgb(255, 255, 255);
-    margin-left: 20px;
+    color: white;
+    margin-left: 20px; 
     align-self: flex-start; 
     padding: 20px 20px;
     font-size: 16px;
     border-radius: 10px;
     cursor: pointer;
+}
+
+#game-screen {
+    display: none;
+}
+
+#game-board {
+    display: grid;
+    gap: 0;
+    background-image: url('graphics/background.png');
+    background-size: cover;
+    background-position: center;
+    width: fit-content;
+    height: fit-content;
+    margin: 10px auto;
+
+}
     
+
+.cell {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wall {
+    background-image: url('graphics/Wall.png');
+    background-size: cover;
+}
+
+.player {
+    background-image: url('graphics/Player.png');
+    background-size: cover;
+}
+
+.hornmonster {
+    background-image: url('graphics/Very\ spooky\ monster.png');
+    background-size: cover;
+}
+
+.bullet {
+    background-color: red;
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    animation: fadeOut 0.5s ease-out;
+}
+
+#score-board {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px;
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 10;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+100% {
+    opacity: 0;
+}
 }
